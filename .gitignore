@@ -1,0 +1,38 @@
+# Nextflow
+.nextflow/
+.nextflow.log*
+work/
+results/
+
+# Personal/private configs
+leukemia_config.json
+heart_failure_config.json
+
+# Local data
+data/*
+!data/hawas_pipeline_workflow_figure.svg
+
+# large data files
+*.bw
+*.bigwig
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.csv.gz
+*.bed
+*.bed.gz
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store

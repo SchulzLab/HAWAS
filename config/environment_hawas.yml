@@ -1,0 +1,17 @@
+name: hawas
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  - r-base=4.3
+  - r-data.table
+  - r-dplyr
+  - r-tidyr
+  - r-ggplot2
+  - r-argparse
+  - r-gprofiler2
+  - r-r.utils
+  - bioconductor-deseq2
+  - libblas
+  - liblapack

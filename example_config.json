@@ -1,0 +1,22 @@
+{
+  "EpiExpress": {
+    "repo_dir": "null",
+    "bigwigs": "/path/to/bigwig_files/",
+    "mode": "CRE-RF",
+    "out_folder": "./results",
+    "gene_file": "/path/to/gene_list.txt",
+    "cre_rf_model_folder": "/path/to/CRE_RF_models/",
+    "binned_cnn_model_folder": "/path/to/CNN_best_models/",
+    "provided_input": "/path/to/ProvidedInput/",
+    "cores": 10,
+    "correlation_cutoff": 0
+  },
+  "HAWAS": {
+    "metadata_file": "/path/to/metadata.txt",
+    "design_formula": "~ Sex + Factor",
+    "metadata_sample_id": "SampleID",
+    "real_rna_matrix": "/path/to/real_rna_counts.tsv",
+    "run_go_enrichment": true,
+    "disgenet_gmt": "/path/to/DGN_diseases_CURATED.gmt"
+  }
+}
