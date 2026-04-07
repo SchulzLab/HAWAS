@@ -35,7 +35,7 @@ The EpiExpress HAWAS Pipeline takes H3K27ac ChIP-seq BigWig files as input and p
 ## Requirements
 
 - [Nextflow](https://www.nextflow.io/) >= 23.04
-- [Conda](https://docs.conda.io/) or [Mamba](https://mamba.readthedocs.io/) for environment management
+- [Conda](https://docs.conda.io/) for environment management
 - Git with submodule support
 - Pre-trained models and supporting provided input files from Zenodo: [https://doi.org/10.5281/zenodo.13992024](https://doi.org/10.5281/zenodo.13992024)
 
@@ -44,8 +44,8 @@ Predicting expression for ~28,000 genes per sample is computationally intensive.
 ## Installation
 
 ```bash
-# 1. Clone the repository together with the EpiExpress submodule (for parallel prediction)
-git clone --recurse-submodules <repo-url>
+# 1. Clone the repository together with the EpiExpress (for parallel prediction)
+git clone https://github.com/SchulzLab/HAWAS.git
 cd epiexpress_hawas_pipeline
 
 # 2. Create the two conda environments the pipeline requires
@@ -137,7 +137,7 @@ The output directory is controlled by `out_folder` in the JSON config. If `out_f
 
 H3K27ac ChIP-seq BigWig files in hg38 containing the fold-change over control signal. The sample name used throughout the pipeline is derived from the BigWig filename. 
 
-### Metadata TXT
+### Metadata
 
 A tab-separated file with one row per sample. The column specified by `metadata_sample_id` must match the BigWig sample names exactly.
 
