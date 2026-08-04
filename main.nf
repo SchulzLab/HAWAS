@@ -62,8 +62,8 @@ workflow {
     // Stage 1: Generate matrices
     def mode = common_config.EpiExpress.mode
     def matrix_cores = common_config.EpiExpress.cores ?: 1
-    def rf_matrix = Channel.empty()
-    def cnn_matrix = Channel.empty()
+    rf_matrix = Channel.empty()
+    cnn_matrix = Channel.empty()
 
     if (mode == 'CRE-RF' || mode == 'all' || mode == 'CRE-RF,Binned-CNN') {
         GENERATE_MATRIX_RF(
@@ -100,7 +100,7 @@ workflow {
     if (real_rna_path == 'null') {
         real_rna_path = null
     }
-    def real_sig_genes = Channel.empty()
+    real_sig_genes = Channel.empty()
     if (real_rna_path) {
         REAL_RNA_COMPARISON(
             Channel.of(file(real_rna_path)),

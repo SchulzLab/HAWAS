@@ -50,7 +50,7 @@ else:
     if os.path.isfile(input_dict['provided_input'] + '/' + 'ModelPerformances_chr21Genes.txt.gz'):
         performance_file = input_dict['provided_input'] + '/' + 'ModelPerformances_chr21Genes.txt.gz'
     else:
-        print("ERROR: missing the mapping file for CREs to genes in the provided input folder. Expected" +
+        print("ERROR: missing the file with model performances. Expected " +
               input_dict['provided_input'] + '/' + 'ModelPerformances.txt.gz')
         sys.exit()
 
