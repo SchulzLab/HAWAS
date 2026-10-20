@@ -80,9 +80,15 @@ run_deseq <- function(matrix_path, model_name) {
   dev.off()
 
   design_vars <- all.vars(as.formula(args$design_formula))
-  vsd <- vst(dds, blind = FALSE)
+  n <- nrow(counts(dds))
+  if (n > 1000) {
+    transformed <- vst(dds, blind = FALSE) # uses default nsub = 1000
+  } else {
+    message("Using rlog (n = ", n, ") instead of vst for PCA")
+    transformed <- rlog(dds, blind = FALSE)
+  }
   pdf(file.path(out_dir, "PCA_plot.pdf"), width = 8, height = 6)
-  print(plotPCA(vsd, intgroup = design_vars[length(design_vars)]))
+  print(plotPCA(transformed, intgroup = design_vars[length(design_vars)]))
   dev.off()
 }
 
